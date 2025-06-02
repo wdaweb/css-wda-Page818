@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            transition: 1s;
+
+        }
+
+        .container {
+            display: none;
+        }
+
+        .blurInLeft {
+            animation-name: blurInLeft
+        }
+
+        @keyframes drawLine {
+            from {
+                opacity: 0;
+
+            }
+
+            to {
+                opacity: 1;
+
+            }
+        }
+
+        @media(max-width:576px) {
+            .container {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin: 10px;
+            }
+
+            .row img {
+                display: block;
+                width: 70vw;
+                height: auto;
+                margin: 1rem;
+            }
+
+            .my-hr {
+                width: 95%;
+                height: 1px;
+                background: #333333;
+                margin-top: 1rem;
+            }
+        }
+
+
+        #section2 {
+            display: none;
+        }
+
+        @media(min-width:577px) {
+            #section2 {
+                display: block;
+                height: 100vh;
+                width: 100vw;
+                position: relative;
+                /* background: rgb(133, 84, 12); */
+            }
+
+            #section2 .row2 {
+                display: flex;
+                text-align: center;
+                width: 10vw;
+                /* max-width: 200px; */
+                height: auto;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .row2 img {
+                display: block;
+                width: 12vw;
+                height: auto;
+            }
+
+            .cardHtml {
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                /* max-width: 200px; */
+                /* height: auto; */
+            }
+
+            .cardHtml::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background: #aaa;
+                top: 1%;
+                right: -173%;
+                height: 72vh;
+                transform: rotate(278deg);
+                animation: drawLine 2s ease-out forwards;
+            }
+
+            #section2 .cardWda {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                align-items: center;
+                top: 30%;
+                left: 50%;
+                width: auto;
+                max-width: 30vw;
+                font-size: 1.5vh;
+            }
+
+            .cardCss {
+                position: absolute;
+                top: 0%;
+                left: 30%;
+            }
+
+            .cardCss::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background: #aaa;
+                top: 53%;
+                right: -42%;
+                height: 21vh;
+                transform: rotate(289deg);
+                animation: drawLine 2s ease-out forwards;
+
+            }
+
+
+            .cardJs {
+                position: absolute;
+                top: 40%;
+                left: 15%;
+            }
+
+            .cardJs::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background: #aaa;
+                top: -22%;
+                right: -125%;
+                height: 50vh;
+                transform: rotate(260deg);
+                animation: drawLine 2s ease-out forwards;
+
+            }
+
+            .cardJq {
+                position: absolute;
+                bottom: 5%;
+                left: 30%;
+            }
+
+            .cardJq::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background: #aaa;
+                top: -12%;
+                right: -51%;
+                height: 23vh;
+                transform: rotate(231deg);
+                animation: drawLine 2s ease-out forwards;
+            }
+
+            .cardBs {
+                position: absolute;
+                top: 5%;
+                right: 20%;
+            }
+
+            .cardBs::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background: #aaa;
+                top: 51%;
+                right: 127%;
+                height: 20vh;
+                transform: rotate(246deg);
+                animation: drawLine 2s ease-out forwards;
+            }
+
+            .cardSa {
+                position: absolute;
+                top: 35%;
+                right: 5%;
+            }
+
+            .cardSa::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background: #aaa;
+                top: -35%;
+                left: -116%;
+                height: 42vh;
+                transform: rotate(274deg);
+                animation: drawLine 2s ease-out forwards;
+            }
+
+            .cardVue {
+                position: absolute;
+                bottom: 5%;
+                right: 15%;
+            }
+
+            .cardVue::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background: #aaa;
+                top: -65%;
+                left: -65%;
+                height: 28vh;
+                transform: rotate(304deg);
+                animation: drawLine 2s ease-out forwards;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row" style="text-align: center;">
+            <img src="/wda/wda.png" alt="泰山職訓局" class="wda">
+            <h3>泰山職訓局</h3>
+            <h4>從零開始的網頁設計課程</h4>
+            <p>轉職網頁開發人員  掌握就業必備職能<br>
+                由淺入深學習技術  強化職場的競爭力</p>
+            <div class="my-hr"></div>
+        </div>
+
+        <div class="row">
+            <img src="/wda/html.png" alt="HTML" class="html">
+            <h2 style="text-align:left;width: 100%;">HTML</h2>
+            <p>HTML（超文字標記語言）是建立網頁的基礎語言，用來定義網頁的結構與內容，例如文字、圖片、連結等。它透過標籤（tag）讓瀏覽器知道如何呈現資訊。</p>
+            <div class="my-hr"></div>
+        </div>
+
+        <div class="row">
+            <img src="/wda/css.png" alt="CSS">
+            <h2 style="text-align:left;width: 100%;">CSS</h2>
+            <p>
+                CSS（層疊樣式表）用來控制 HTML 網頁的外觀與樣式，例如顏色、字型、排版與版面配置。它讓網頁更美觀且更易於設計與維護。
+            </p>
+            <div class="my-hr"></div>
+        </div>
+
+        <div class="row">
+            <img src="/wda/js.png" alt="JS">
+            <h2 style="text-align:left;width: 100%;">JavaScript</h2>
+            <p>JavaScript（簡稱 JS）是一種用於網頁的程式語言，能讓網頁具有互動功能，例如按鈕點擊、表單驗證、動畫效果等，是前端開發的重要技術之一。</p>
+            <div class="my-hr"></div>
+        </div>
+
+        <div class="row">
+            <img src="/wda/jq.png" alt="JQ">
+            <h2 style="text-align:left;width: 100%;">jQuery</h2>
+            <p>jQuery（簡稱 jQ）是一個輕量級的 JavaScript 函式庫，簡化了操作 DOM、處理事件、動畫效果與 Ajax 的語法，讓網頁互動功能更容易開發與跨瀏覽器相容。</p>
+            <div class="my-hr"></div>
+        </div>
+
+        <div class="row">
+            <img src="/wda/bs.png" alt="BS">
+            <h2 style="text-align:left;width: 100%;">Bootstrap</h2>
+            <p>Bootstrap 是一套開源的前端框架，提供現成的 CSS 和 JavaScript 元件，可快速建立響應式、跨裝置相容的美觀網頁，常用於佈局、按鈕、表單等設計。
+            </p>
+            <div class="my-hr"></div>
+        </div>
+
+        <div class="row">
+            <img src="/wda/sass.png" alt="SASS">
+            <h2 style="text-align:left;width: 100%;">Sass</h2>
+            <p>SaaS（軟體即服務）是一種透過網路提供軟體應用的模式，用戶無需安裝，只需透過瀏覽器即可使用，方便更新與維護，常見於雲端辦公、電子郵件等服務。</p>
+            <div class="my-hr"></div>
+        </div>
+
+        <div class="row">
+            <img src="/wda/vue.png" alt="Vue.js">
+            <h2 style="text-align:left;width: 100%;">Vue.js</h2>
+            <p>Vue.js 是一款輕量且靈活的 JavaScript 前端框架，用於構建互動式用戶界面和單頁應用，具備簡單易學、組件化和響應式數據綁定的特點。</p>
+            <div class="my-hr"></div>
+        </div>
+    </div>
+
+
+
+    <section id="section2">
+        <div class="row2 cardWda" style="text-align: center;">
+            <img src="/wda/wda.png" alt="泰山職訓局">
+            <h3>泰山職訓局</h3>
+            <h4>從零開始的網頁設計課程</h4>
+            <p>轉職網頁開發人員  掌握就業必備職能<br>
+                由淺入深學習技術  強化職場的競爭力</p>
+
+        </div>
+
+        <div class="row2 cardHtml">
+            <img src="/wda/html.png" alt="HTML" class="html">
+            <h3>HTML</h3>
+
+        </div>
+
+
+        <div class="row2 cardCss">
+            <img src="/wda/css.png" alt="CSS">
+            <h3>CSS</h3>
+
+        </div>
+
+        <div class="row2 cardJs">
+            <img src="/wda/js.png" alt="JS">
+            <h3>JavaScript</h3>
+
+        </div>
+
+
+        <div class="row2 cardJq">
+            <img src="/wda/jq.png" alt="JQ">
+            <h3>jQuery</h3>
+
+        </div>
+
+        <div class="row2 cardBs">
+            <img src="/wda/bs.png" alt="BS">
+            <h3>Bootstrap</h3>
+
+        </div>
+        <div class="row2 cardSa">
+            <img src="/wda/sass.png" alt="SASS">
+            <h3>Sass</h3>
+
+        </div>
+
+        <div class="row2 cardVue">
+            <img src="/wda/vue.png" alt="Vue.js">
+            <h3>Vue.js</h3>
+
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>
